@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a href="{% url 'main_app:home_view' %}">><img src="{% static 'images/bloodbank_logo.png' %}" alt="Blood Bank Logo"></a>
+        <a href="{% url 'main_app:home_view' %}" class="logo"><img src="{% static 'images/bloodbank_logo.png' %}" alt="Blood Bank Logo"></a>
         <nav>
             <a href="{% url 'main_app:home_view' %}">About</a>
             <a href="{% url 'donations_app:donate_info_view' %}">Save a Life</a>
@@ -25,3 +25,8 @@
     </footer>
 </body>
 </html>
+
+
+
+
+
