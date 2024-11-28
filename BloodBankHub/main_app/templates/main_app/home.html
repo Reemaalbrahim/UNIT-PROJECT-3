@@ -8,5 +8,19 @@
         <a href="{% url 'donations_app:blood_bank_view' %}" class="button">Blood Bank</a>
     </div>
 </div>
+
+<div class="about-section" id="about">
+    <h2>About Us</h2>
+    <p>Welcome to Blood Bank Hub, where we are dedicated to saving lives through the essential service of blood donation.</p>
+    <p>Our mission is to ensure a safe and reliable supply of blood and blood products for patients in need </p>
+    <p> while fostering a community of generous donors who understand the importance of giving.</p>
+</div>
+
+<script>
+    function showAboutSection() {
+        document.querySelector('.about-section').style.display = 'block';
+        window.scrollTo(0, document.querySelector('.about-section').offsetTop);
+    }
+</script>
 {% endblock %}
 

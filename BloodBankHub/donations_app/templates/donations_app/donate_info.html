@@ -1,0 +1,21 @@
+{% extends 'main_app/base.html' %}
+
+{% block content %}
+<h2>Donate Blood</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="blood_type">Blood Type:</label>
+    <input type="text" id="blood_type" name="blood_type" required>
+
+    <label for="blood_quantity">Blood Quantity:</label>
+    <input type="number" id="blood_quantity" name="blood_quantity" required>
+
+    <button type="submit">Donate</button>
+</form>
+{% endblock %}

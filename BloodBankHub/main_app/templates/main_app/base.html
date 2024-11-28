@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Add Font Awesome CDN -->
     <title>{% block title %}Blood Bank Hub{% endblock %}</title>
 </head>
 <body>
     <header>
-        <a href="{% url 'main_app:home_view' %}" class="logo"><img src="{% static 'images/bloodbank_logo.png' %}" alt="Blood Bank Logo"></a>
+        <a href="{% url 'main_app:home_view' %}" class="logo">
+            <img src="{% static 'images/bloodbank_logo.png' %}" alt="Blood Bank Logo">
+        </a>
         <nav>
-            <a href="{% url 'main_app:home_view' %}">About</a>
+            <a href="{% url 'main_app:home_view' %}#about">About</a>
             <a href="{% url 'donations_app:donate_info_view' %}">Save a Life</a>
             <a href="{% url 'donations_app:blood_bank_view' %}">Blood Bank</a>
             <a href="{% url 'main_app:contact_us_view' %}">Contact Us</a>
+            <div class="login-container">
+                <a href="{% url 'main_app:contact_us_view' %}" class="login-button">Login</a>
+                <i class="fa-regular fa-user profile-icon"></i> <!-- Font Awesome icon -->
+            </div>
         </nav>
     </header>
     <main>
@@ -25,6 +32,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
