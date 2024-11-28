@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}Blood Bank Hub{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <a href="{% url 'main_app:home_view' %}">><img src="{% static 'images/bloodbank_logo.png' %}" alt="Blood Bank Logo"></a>
+        <nav>
+            <a href="{% url 'main_app:home_view' %}">About</a>
+            <a href="{% url 'donations_app:donate_info_view' %}">Save a Life</a>
+            <a href="{% url 'donations_app:blood_bank_view' %}">Blood Bank</a>
+            <a href="{% url 'main_app:contact_us_view' %}">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Blood Bank Hub</p>
+    </footer>
+</body>
+</html>

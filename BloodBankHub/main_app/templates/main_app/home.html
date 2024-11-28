@@ -1,0 +1,8 @@
+{% extends 'main_app/base.html' %}
+
+{% block content %}
+<h1>Welcome to the Blood Bank Hub</h1>
+<p>Your journey to save lives starts here.</p>
+<a href="{% url 'donations_app:donate_info_view' %}">Donate Blood</a>
+<a href="{% url 'donations_app:blood_bank_view' %}">View Blood Bank</a>
+{% endblock %}
